@@ -3,6 +3,7 @@
 # Rational Multi-Modal Transformers for TCR-pMHC Prediction
 
 T cell receptor (TCR) recognition of peptide–MHC (pMHC) complexes is fundamental to adaptive immunity and central to the development of T cell-based immunotherapies. While transformer-based models have shown promise in predicting TCR–pMHC interactions, most lack a systematic and explainable approach to architecture design. We present an approach that makes use of recent advances in post-hoc explainability to inform the construction of an encoder–decoder transformer model. By identifying the most informative combinations of TCR and epitope sequence inputs, we optimize cross-attention strategies, incorporate auxiliary training objectives, and introduce a novel early-stopping criterion based on explanation quality. Our framework achieves state-of-the-art predictive performance while simultaneously improving explainability, robustness, and generalization. This work establishes a principled, explanation-driven strategy for modeling TCR–pMHC binding and offers mechanistic insights into sequence-level binding behavior through the lens of deep learning.
+![alt](./images/intro.png)
 
 ## Requirements
 We recommend to use conda to manage the environment.

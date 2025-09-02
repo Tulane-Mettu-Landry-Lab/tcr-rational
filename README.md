@@ -32,13 +32,13 @@ Run `python posthoc.py` to use posthoc mothods to evaluate the selected model. Y
 |TCR A + All CDR3bs + Epitope|`CDR1b` `CDR2b` `CDR3b` `TCRA` `epitope`|binder,MLM|`projects/representations/tcra_cdrb_binder/config.json`|`configs/posthocs/tcra_cdrb_binder.json`|
 |TCRs + Epitope|`TCRA` `TCRB` `epitope`|binder,MLM|`projects/representations/tcrab_binder/config.json`|`configs/posthocs/tcrab_binder.json`|
 |TCRs + All CDRs + Epitope|`TCRA` `TCRB` `CDR1a` `CDR2a` `CDR3a` `CDR1b` `CDR2b` `CDR3b` `epitope`|binder,MLM|`projects/representations/tcrab_cdr123_binder/config.json`|`configs/posthocs/tcrab_cdr123_binder.json`|
-|Epitope$\to$CDR3b|`epitope` `CDR3b`|binder,MLM|`projects/crossattentions/peptide2cdr3b_binder/config.json`|`configs/posthocs/peptide2cdr3b_binder.json`|
-|Epitope$\to$CDR3b+CDR3b|`epitope` `CDR3b`|binder,MLM|`projects/crossattentions/cdr3b_peptide2cdr3b_binder/config.json`|`configs/posthocs/cdr3b_peptide2cdr3b_binder.json`|
-|Epitope$\to$CDR3b+Epitope|`epitope` `CDR3b`|binder,MLM|`projects/crossattentions/peptide_peptide2cdr3b_binder/config.json`|`configs/posthocs/peptide_peptide2cdr3b_binder.json`|
-|CDR3b$\to$Epitope|`epitope` `CDR3b`|binder,MLM|`projects/crossattentions/cdr3b2peptide_binder/config.json`|`configs/posthocs/cdr3b2peptide_binder`|
-|CDR3b$\to$Epitope+CDR3b|`epitope` `CDR3b`|binder,MLM|`projects/crossattentions/cdr3b_cdr3b2peptide_binder/config.json`|`configs/posthocs/cdr3b_cdr3b2peptide_binder.json`|
-|CDR3b$\to$Epitope+Epitope|`epitope` `CDR3b`|binder,MLM|`projects/crossattentions/peptide_cdr3b2peptide_binder/config.json`|`configs/posthocs/peptide_cdr3b2peptide_binder.json`|
-|CDR3b$\leftrightarrow$Epitope|`epitope` `CDR3b`|binder,MLM|`projects/crossattentions/cotcrab2peptide_binder/config.json`|`configs/posthocs/cotcrab2peptide_binder.json`|
+|Epitope->CDR3b|`epitope` `CDR3b`|binder,MLM|`projects/crossattentions/peptide2cdr3b_binder/config.json`|`configs/posthocs/peptide2cdr3b_binder.json`|
+|Epitope->CDR3b+CDR3b|`epitope` `CDR3b`|binder,MLM|`projects/crossattentions/cdr3b_peptide2cdr3b_binder/config.json`|`configs/posthocs/cdr3b_peptide2cdr3b_binder.json`|
+|Epitope->CDR3b+Epitope|`epitope` `CDR3b`|binder,MLM|`projects/crossattentions/peptide_peptide2cdr3b_binder/config.json`|`configs/posthocs/peptide_peptide2cdr3b_binder.json`|
+|CDR3b->Epitope|`epitope` `CDR3b`|binder,MLM|`projects/crossattentions/cdr3b2peptide_binder/config.json`|`configs/posthocs/cdr3b2peptide_binder`|
+|CDR3b->Epitope+CDR3b|`epitope` `CDR3b`|binder,MLM|`projects/crossattentions/cdr3b_cdr3b2peptide_binder/config.json`|`configs/posthocs/cdr3b_cdr3b2peptide_binder.json`|
+|CDR3b->Epitope+Epitope|`epitope` `CDR3b`|binder,MLM|`projects/crossattentions/peptide_cdr3b2peptide_binder/config.json`|`configs/posthocs/peptide_cdr3b2peptide_binder.json`|
+|CDR3b<->Epitope|`epitope` `CDR3b`|binder,MLM|`projects/crossattentions/cotcrab2peptide_binder/config.json`|`configs/posthocs/cotcrab2peptide_binder.json`|
 |EGM-1 Classification Only|`epitope` `TCR A` `TCR B`|binder|`projects/lossdesigns/classification_only/config.json`|`configs/posthocs/precotcrabsep_2peptide_binder.json`|
 |EGM-1 MHC Loss|`epitope` `TCR A` `TCR B`|binder, MLM, MHC|`projects/lossdesigns/mhc_loss/config.json`|`configs/posthocs/precotcrabsep_2peptide_binder.json`|
 |EGM-1 TRVJ Loss|`epitope` `TCR A` `TCR B`|binder, MLM, TRVJ|`projects/lossdesigns/trvj_loss/config.json`|`configs/posthocs/precotcrabsep_2peptide_binder.json`|

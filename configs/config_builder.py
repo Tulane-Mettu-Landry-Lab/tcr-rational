@@ -1,0 +1,137 @@
+from imml.configs import IMMLConfiguration, IMMLConfigurationGroup
+
+configs = IMMLConfigurationGroup(
+    rules = IMMLConfiguration(
+        dict(rule='template', template='{CDR3A}', tokenizer='aminoacid', prefix='cdr3a', mapping={}),
+        dict(rule='template', template='{CDR3B}', tokenizer='aminoacid', prefix='cdr3b', mapping={}),
+        dict(rule='template', template='{epitope}', tokenizer='aminoacid', prefix='epitope', mapping={}),
+        dict(rule='forward', keys=['Label'], prefix=None, mapping={'Label': 'binder_label'}),
+    ),
+    collator = IMMLConfiguration(
+        mlm=True,
+        mlm_probability=0.5,
+        mask_replace_prob=1.0,
+        random_replace_prob=0.0,
+        pad_to_multiple_of=None,
+        seed=None,
+    ),
+    tokenizers = IMMLConfiguration(
+        dict(name='aminoacid', path='tokenizers/aminoacid', single='<CLS> $A <EOS>', pair='<CLS> $A <SEP> $B:1 <EOS>:1'),
+    ),
+    loss = IMMLConfiguration(
+        header_binder = dict(
+            mix_weight = 0.5,
+            loss = 'cross_entropy',
+            act_func = 'softmax',
+            reduction = 'mean',
+            label_smoothing = 0.0
+        ),
+        mlm_cdr3a = dict(
+            mix_weight = 0.2,
+            loss = 'forward',
+            act_func = None,
+        ),
+        mlm_cdr3b = dict(
+            mix_weight = 0.2,
+            loss = 'forward',
+            act_func = None,
+        ),
+        mlm_epitope = dict(
+            mix_weight = 0.2,
+            loss = 'forward',
+            act_func = None,
+        ),
+    ),
+    model = IMMLConfiguration(
+        cdr3a = dict(
+            prefix='cdr3a',
+            model='BertForMaskedLM',
+            tokenizer='aminoacid',
+            hidden_size=128,
+            num_hidden_layers=2,
+            num_attention_heads=1,
+            intermediate_size=512,
+            max_position_embeddings=50,
+            hidden_act="gelu",
+            hidden_dropout_prob=0.1,
+            attention_probs_dropout_prob=0.1,
+            type_vocab_size=2,
+            initializer_range=0.02,
+            layer_norm_eps=1e-12,
+            position_embedding_type="absolute",
+            use_cache=True,
+            classifier_dropout=None,
+        ),
+        cdr3b = dict(
+            prefix='cdr3b',
+            model='BertForMaskedLM',
+            tokenizer='aminoacid',
+            hidden_size=128,
+            num_hidden_layers=2,
+            num_attention_heads=1,
+            intermediate_size=512,
+            max_position_embeddings=50,
+            hidden_act="gelu",
+            hidden_dropout_prob=0.1,
+            attention_probs_dropout_prob=0.1,
+            type_vocab_size=2,
+            initializer_range=0.02,
+            layer_norm_eps=1e-12,
+            position_embedding_type="absolute",
+            use_cache=True,
+            classifier_dropout=None,
+        ),
+        epitope = dict(
+            prefix='epitope',
+            model='BertForMaskedLM',
+            tokenizer='aminoacid',
+            hidden_size=128,
+            num_hidden_layers=2,
+            num_attention_heads=1,
+            intermediate_size=512,
+            max_position_embeddings=50,
+            hidden_act="gelu",
+            hidden_dropout_prob=0.1,
+            attention_probs_dropout_prob=0.1,
+            type_vocab_size=2,
+            initializer_range=0.02,
+            layer_norm_eps=1e-12,
+            position_embedding_type="absolute",
+            use_cache=True,
+            classifier_dropout=None,
+        ),
+        header_binder = dict(
+            num_labels=2,
+            layers = [128],
+            bias = True,
+            act_func='relu'
+        ),
+    ),
+    model_tasks = IMMLConfiguration(
+        task_configs = [
+            dict(name='binder', keys=['cdr3a', 'cdr3b', 'epitope'], target='binder_label', prefix='header'),
+            dict(name='epitope_binder', keys=['epitope'], target='binder_label', prefix='header'),
+        ],
+        keys=['cdr3a', 'cdr3b', 'epitope']
+    ),
+    train = IMMLConfiguration(
+        
+        per_device_train_batch_size=2048,
+        num_train_epochs=20,
+        logging_strategy='epoch',
+        logging_steps=5,
+        save_strategy='epoch',
+        save_steps=5,
+        remove_unused_columns=False,
+        optim='adamw_torch',
+        learning_rate=0.0001,
+        weight_decay=0,
+        lr_scheduler_type='cosine',
+        warmup_steps=10,
+        torch_compile=False,
+        seed=42,
+        per_device_eval_batch_size=2048,
+        
+        save_n_epoch=10,
+    )
+)

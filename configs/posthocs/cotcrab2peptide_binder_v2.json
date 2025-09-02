@@ -1,0 +1,329 @@
+{
+  "0": {
+    "name": "epitope",
+    "modules": [
+      "decoder_epitope->crossattention->self->query",
+      "decoder_epitope->crossattention->self->key",
+      "decoder_epitope->crossattention->self->dropout",
+      "decoder_epitope->attention->self->dropout",
+      "decoder_tra->crossattention->self->key",
+      "decoder_tra->crossattention->self->dropout",
+      "decoder_trb->crossattention->self->key",
+      "decoder_trb->crossattention->self->dropout",
+      "epitope->attention->self->dropout"
+    ],
+    "flow": [
+      {
+        "method": "grad_crossattn_rollout",
+        "discard_ratio": 0.9,
+        "multihead_reduce": "max",
+        "residual_connect": true,
+        "norm": true,
+        "clip": 1
+      },
+      {
+        "method": "quantify_queryin",
+        "reduce_method": "sum",
+        "norm": true,
+        "clip": 1
+      },
+      {
+        "method": "grad_crossattn_rollout",
+        "discard_ratio": 0.9,
+        "multihead_reduce": "max",
+        "residual_connect": true,
+        "norm": true,
+        "clip": 1
+      },
+      {
+        "method": "quantify_queryin",
+        "reduce_method": "sum",
+        "norm": true,
+        "clip": 1
+      },
+      {
+        "method": "grad_crossattn_rollout",
+        "discard_ratio": 0.9,
+        "multihead_reduce": "max",
+        "residual_connect": true,
+        "norm": true,
+        "clip": 1
+      },
+      {
+        "method": "quantify_queryin",
+        "reduce_method": "sum",
+        "norm": true,
+        "clip": 1
+      },
+      {
+        "method": "grad_crossattn_rollout",
+        "discard_ratio": 0.9,
+        "multihead_reduce": "max",
+        "residual_connect": true,
+        "norm": true,
+        "clip": 1
+      },
+      {
+        "method": "quantify_queryin",
+        "reduce_method": "sum",
+        "norm": true,
+        "clip": 1
+      },
+      {
+        "method": "grad_attn_rollout_quantify_query",
+        "discard_ratio": 0.9,
+        "multihead_reduce": "max",
+        "residual_connect": true,
+        "norm": true
+      },
+      {
+        "method": "key_decompose_quantify_query"
+      },
+      {
+        "method": "quantify_query",
+        "reduce_method": "sum",
+        "norm": true
+      },
+      {
+        "method": "grad_attn",
+        "discard_ratio": 0.9,
+        "multihead_reduce": "max",
+        "residual_connect": true,
+        "norm": true
+      },
+      {
+        "method": "grad_attn_rollout_quantify_query",
+        "discard_ratio": 0.9,
+        "multihead_reduce": "max",
+        "residual_connect": true,
+        "norm": true
+      },
+      {
+        "method": "key_decompose_quantify_query"
+      },
+      {
+        "method": "quantify_query",
+        "reduce_method": "sum",
+        "norm": true
+      },
+      {
+        "method": "grad_attn",
+        "discard_ratio": 0.9,
+        "multihead_reduce": "max",
+        "residual_connect": true,
+        "norm": true
+      },
+      {
+        "method": "grad_attn",
+        "discard_ratio": 0.9,
+        "multihead_reduce": "max",
+        "residual_connect": true,
+        "norm": true
+      },
+      {
+        "method": "grad_attn",
+        "discard_ratio": 0.9,
+        "multihead_reduce": "max",
+        "residual_connect": true,
+        "norm": true
+      }
+    ],
+    "collect": "flatten"
+  },
+  "1": {
+    "name": "TRA",
+    "modules": [
+      "decoder_tra->attention->self->dropout",
+      "decoder_trb->crossattention->self->key",
+      "decoder_trb->crossattention->self->dropout",
+      "decoder_epitope->crossattention->self->key",
+      "decoder_epitope->crossattention->self->dropout",
+      "tra->attention->self->dropout"
+    ],
+    "flow": [
+      {
+        "method": "grad_crossattn_rollout",
+        "discard_ratio": 0.9,
+        "multihead_reduce": "max",
+        "residual_connect": true,
+        "norm": true,
+        "clip": 0
+      },
+      {
+        "method": "quantify_queryin",
+        "reduce_method": "sum",
+        "norm": true,
+        "clip": 0
+      },
+      {
+        "method": "grad_crossattn_rollout",
+        "discard_ratio": 0.9,
+        "multihead_reduce": "max",
+        "residual_connect": true,
+        "norm": true,
+        "clip": 0
+      },
+      {
+        "method": "quantify_queryin",
+        "reduce_method": "sum",
+        "norm": true,
+        "clip": 0
+      },
+      {
+        "method": "grad_attn",
+        "discard_ratio": 0.9,
+        "multihead_reduce": "max",
+        "residual_connect": true,
+        "norm": true
+      },
+      {
+        "method": "grad_attn",
+        "discard_ratio": 0.9,
+        "multihead_reduce": "max",
+        "residual_connect": true,
+        "norm": true
+      },
+      {
+        "method": "grad_crossattn_rollout",
+        "discard_ratio": 0.9,
+        "multihead_reduce": "max",
+        "residual_connect": true,
+        "norm": true,
+        "clip": 0
+      },
+      {
+        "method": "quantify_queryin",
+        "reduce_method": "sum",
+        "norm": true,
+        "clip": 0
+      },
+      {
+        "method": "grad_crossattn_rollout",
+        "discard_ratio": 0.9,
+        "multihead_reduce": "max",
+        "residual_connect": true,
+        "norm": true,
+        "clip": 0
+      },
+      {
+        "method": "quantify_queryin",
+        "reduce_method": "sum",
+        "norm": true,
+        "clip": 0
+      },
+      {
+        "method": "grad_attn",
+        "discard_ratio": 0.9,
+        "multihead_reduce": "max",
+        "residual_connect": true,
+        "norm": true
+      },
+      {
+        "method": "grad_attn",
+        "discard_ratio": 0.9,
+        "multihead_reduce": "max",
+        "residual_connect": true,
+        "norm": true
+      }
+    ],
+    "collect": "flatten"
+  },
+  "2": {
+    "name": "TRB",
+    "modules": [
+      "decoder_trb->attention->self->dropout",
+      "decoder_tra->crossattention->self->key",
+      "decoder_tra->crossattention->self->dropout",
+      "decoder_epitope->crossattention->self->key",
+      "decoder_epitope->crossattention->self->dropout",
+      "trb->attention->self->dropout"
+    ],
+    "flow": [
+      {
+        "method": "grad_attn",
+        "discard_ratio": 0.9,
+        "multihead_reduce": "max",
+        "residual_connect": true,
+        "norm": true
+      },
+      {
+        "method": "grad_attn",
+        "discard_ratio": 0.9,
+        "multihead_reduce": "max",
+        "residual_connect": true,
+        "norm": true
+      },
+      {
+        "method": "grad_crossattn_rollout",
+        "discard_ratio": 0.9,
+        "multihead_reduce": "max",
+        "residual_connect": true,
+        "norm": true,
+        "clip": 0
+      },
+      {
+        "method": "quantify_queryin",
+        "reduce_method": "sum",
+        "norm": true,
+        "clip": 0
+      },
+      {
+        "method": "grad_crossattn_rollout",
+        "discard_ratio": 0.9,
+        "multihead_reduce": "max",
+        "residual_connect": true,
+        "norm": true,
+        "clip": 0
+      },
+      {
+        "method": "quantify_queryin",
+        "reduce_method": "sum",
+        "norm": true,
+        "clip": 0
+      },
+      {
+        "method": "grad_crossattn_rollout",
+        "discard_ratio": 0.9,
+        "multihead_reduce": "max",
+        "residual_connect": true,
+        "norm": true,
+        "clip": 1
+      },
+      {
+        "method": "quantify_queryin",
+        "reduce_method": "sum",
+        "norm": true,
+        "clip": 1
+      },
+      {
+        "method": "grad_crossattn_rollout",
+        "discard_ratio": 0.9,
+        "multihead_reduce": "max",
+        "residual_connect": true,
+        "norm": true,
+        "clip": 1
+      },
+      {
+        "method": "quantify_queryin",
+        "reduce_method": "sum",
+        "norm": true,
+        "clip": 1
+      },
+      {
+        "method": "grad_attn",
+        "discard_ratio": 0.9,
+        "multihead_reduce": "max",
+        "residual_connect": true,
+        "norm": true
+      },
+      {
+        "method": "grad_attn",
+        "discard_ratio": 0.9,
+        "multihead_reduce": "max",
+        "residual_connect": true,
+        "norm": true
+      }
+    ],
+    "collect": "flatten"
+  }
+}

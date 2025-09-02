@@ -1,0 +1,20 @@
+{
+  "name": "TCRRNL",
+  "index_col": 0,
+  "sep": ",",
+  "file_name": "data.csv",
+  "data_columns": null,
+  "label_columns":
+  [
+    "Label",
+    "Label_species",
+    "Label_MHClass",
+    "Label_MHC",
+    "Label_TRAV",
+    "Label_TRAJ",
+    "Label_TRBV",
+    "Label_TRBJ"
+  ],
+  "desc": "The TCRR dataset with sythesis negative data (the number of negative dataset is the same as the number of positive data).",
+  "seed": 42
+}

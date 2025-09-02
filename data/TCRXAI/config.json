@@ -1,0 +1,9 @@
+{
+  "name": "TCRXAI",
+  "index_col": 0,
+  "sep": ",",
+  "file_name": "data.csv",
+  "data_columns": ["CDR1A", "CDR2A", "CDR3A", "TRA", "CDR1B", "CDR2B", "CDR3B", "TRB", "Peptide"],
+  "label_columns": ["Label"],
+  "desc": "The TCRXAT dataset with explainable features."
+}

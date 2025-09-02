@@ -1,0 +1,115 @@
+{
+  "version": "1.0",
+  "truncation": null,
+  "padding": null,
+  "added_tokens": [
+    {
+      "id": 0,
+      "content": "<EOS>",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": false,
+      "special": true
+    },
+    {
+      "id": 1,
+      "content": "<MSK>",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": false,
+      "special": true
+    },
+    {
+      "id": 2,
+      "content": "<CLS>",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": false,
+      "special": true
+    },
+    {
+      "id": 3,
+      "content": "<PAD>",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": false,
+      "special": true
+    },
+    {
+      "id": 4,
+      "content": "<MIS>",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": false,
+      "special": true
+    },
+    {
+      "id": 5,
+      "content": "<SEP>",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": false,
+      "special": true
+    },
+    {
+      "id": 6,
+      "content": "<BOS>",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": false,
+      "special": true
+    }
+  ],
+  "normalizer": null,
+  "pre_tokenizer": {
+    "type": "Split",
+    "pattern": {
+      "Regex": "[*:/-]"
+    },
+    "behavior": "Removed",
+    "invert": false
+  },
+  "post_processor": null,
+  "decoder": null,
+  "model": {
+    "type": "WordLevel",
+    "vocab": {
+      "<EOS>": 0,
+      "<MSK>": 1,
+      "<CLS>": 2,
+      "<PAD>": 3,
+      "<MIS>": 4,
+      "<SEP>": 5,
+      "<BOS>": 6,
+      "01": 7,
+      "TRBJ1": 8,
+      "1": 9,
+      "TRBJ2": 10,
+      "6": 11,
+      "02": 12,
+      "2": 13,
+      "4": 14,
+      "5": 15,
+      "3": 16,
+      "TRBJ5": 17,
+      "7": 18,
+      "7 ": 19,
+      "DV8": 20,
+      "TCRBJ1": 21,
+      "TRBJ10": 22,
+      "TRBJ17": 23,
+      "TRBJ19": 24,
+      "TRBJ20": 25,
+      "TRBJ24": 26,
+      "TRBJ38": 27
+    },
+    "unk_token": "<MIS>"
+  }
+}

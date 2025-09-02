@@ -1,0 +1,8 @@
+{
+  "mlm": true,
+  "mlm_probability": 0.5,
+  "mask_replace_prob": 1.0,
+  "random_replace_prob": 0.0,
+  "pad_to_multiple_of": null,
+  "seed": null
+}

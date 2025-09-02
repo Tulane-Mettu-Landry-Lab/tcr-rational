@@ -1,0 +1,68 @@
+{
+  "cdr3a_mlm": {
+    "pred_key": "logits_cdr3a",
+    "label_key": "cdr3a_labels",
+    "metrics": [
+      "mlm_rocauc",
+      "mlm_recall",
+      "mlm_precision",
+      "mlm_accuracy"
+    ],
+    "parameters": {
+      "ignore_id": -100,
+      "average": "macro",
+      "zero_division": 0,
+      "multi_class": "ovo",
+      "norm": true
+    }
+  },
+  "cdr3b_mlm": {
+    "pred_key": "logits_cdr3b",
+    "label_key": "cdr3b_labels",
+    "metrics": [
+      "mlm_rocauc",
+      "mlm_recall",
+      "mlm_precision",
+      "mlm_accuracy"
+    ],
+    "parameters": {
+      "ignore_id": -100,
+      "average": "macro",
+      "zero_division": 0,
+      "multi_class": "ovo",
+      "norm": true
+    }
+  },
+  "epitope_mlm": {
+    "pred_key": "logits_epitope",
+    "label_key": "epitope_labels",
+    "metrics": [
+      "mlm_rocauc",
+      "mlm_recall",
+      "mlm_precision",
+      "mlm_accuracy"
+    ],
+    "parameters": {
+      "ignore_id": -100,
+      "average": "macro",
+      "zero_division": 0,
+      "multi_class": "ovo",
+      "norm": true
+    }
+  },
+  "binder": {
+    "pred_key": "predictions_binder",
+    "label_key": "binder_label",
+    "metrics": [
+      "binary_accuracy",
+      "binary_recall",
+      "binary_precision",
+      "binary_rocauc",
+      "binary_f1"
+    ],
+    "parameters": {
+      "threshold": 0.5,
+      "norm": true
+    }
+  }
+}

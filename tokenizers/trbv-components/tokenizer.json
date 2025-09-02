@@ -1,0 +1,139 @@
+{
+  "version": "1.0",
+  "truncation": null,
+  "padding": null,
+  "added_tokens": [
+    {
+      "id": 0,
+      "content": "<EOS>",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": false,
+      "special": true
+    },
+    {
+      "id": 1,
+      "content": "<MSK>",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": false,
+      "special": true
+    },
+    {
+      "id": 2,
+      "content": "<CLS>",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": false,
+      "special": true
+    },
+    {
+      "id": 3,
+      "content": "<PAD>",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": false,
+      "special": true
+    },
+    {
+      "id": 4,
+      "content": "<MIS>",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": false,
+      "special": true
+    },
+    {
+      "id": 5,
+      "content": "<SEP>",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": false,
+      "special": true
+    },
+    {
+      "id": 6,
+      "content": "<BOS>",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": false,
+      "special": true
+    }
+  ],
+  "normalizer": null,
+  "pre_tokenizer": {
+    "type": "Split",
+    "pattern": {
+      "Regex": "[*:/-]"
+    },
+    "behavior": "Removed",
+    "invert": false
+  },
+  "post_processor": null,
+  "decoder": null,
+  "model": {
+    "type": "WordLevel",
+    "vocab": {
+      "<EOS>": 0,
+      "<MSK>": 1,
+      "<CLS>": 2,
+      "<PAD>": 3,
+      "<MIS>": 4,
+      "<SEP>": 5,
+      "<BOS>": 6,
+      "01": 7,
+      "1": 8,
+      "TRBV6": 9,
+      "TRBV7": 10,
+      "02": 11,
+      "2": 12,
+      "3": 13,
+      "TRBV5": 14,
+      "4": 15,
+      "TRBV10": 16,
+      "TRBV12": 17,
+      "TRBV13": 18,
+      "TRBV4": 19,
+      "03": 20,
+      "6": 21,
+      "8": 22,
+      "9": 23,
+      "5": 24,
+      "7": 25,
+      "TRBV11": 26,
+      "TRBV19": 27,
+      "TRBV20": 28,
+      "TRBV3": 29,
+      "TRBV15": 30,
+      "TRBV23": 31,
+      "TRBV24": 32,
+      "TRBV29": 33,
+      "TRBV9": 34,
+      "19": 35,
+      "TCRBV7": 36,
+      "TRBV1": 37,
+      "TRBV14": 38,
+      "TRBV16": 39,
+      "TRBV17": 40,
+      "TRBV18": 41,
+      "TRBV2": 42,
+      "TRBV21": 43,
+      "TRBV25": 44,
+      "TRBV26": 45,
+      "TRBV27": 46,
+      "TRBV28": 47,
+      "TRBV30": 48,
+      "TRBV31": 49,
+      "TRBV6S": 50,
+      "TRBV8": 51
+    },
+    "unk_token": "<MIS>"
+  }
+}

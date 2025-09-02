@@ -1,0 +1,25 @@
+{
+  "0": {
+    "name": "CDR3B",
+    "modules": [
+      "cdr3b->self->dropout"
+    ],
+    "flow": [
+      {
+        "method": "attn_lrp",
+        "discard_ratio": 0.9,
+        "multihead_reduce": "mean",
+        "residual_connect": true,
+        "norm": true
+      },
+      {
+        "method": "attn_lrp",
+        "discard_ratio": 0.9,
+        "multihead_reduce": "mean",
+        "residual_connect": true,
+        "norm": true
+      }
+    ],
+    "collect": "token"
+  }
+}

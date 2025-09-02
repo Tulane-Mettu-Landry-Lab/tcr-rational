@@ -1,0 +1,44 @@
+{
+  "header_binder": {
+    "mix_weight": 0.5,
+    "loss": "cross_entropy",
+    "act_func": "softmax",
+    "reduction": "mean",
+    "label_smoothing": 0.0
+  },
+  "mlm_cdr1a": {
+    "mix_weight": 0.1,
+    "loss": "forward",
+    "act_func": null
+  },
+  "mlm_cdr2a": {
+    "mix_weight": 0.1,
+    "loss": "forward",
+    "act_func": null
+  },
+  "mlm_cdr3a": {
+    "mix_weight": 0.1,
+    "loss": "forward",
+    "act_func": null
+  },
+  "mlm_cdr1b": {
+    "mix_weight": 0.1,
+    "loss": "forward",
+    "act_func": null
+  },
+  "mlm_cdr2b": {
+    "mix_weight": 0.1,
+    "loss": "forward",
+    "act_func": null
+  },
+  "mlm_cdr3b": {
+    "mix_weight": 0.1,
+    "loss": "forward",
+    "act_func": null
+  },
+  "mlm_epitope": {
+    "mix_weight": 0.1,
+    "loss": "forward",
+    "act_func": null
+  }
+}

@@ -1,0 +1,117 @@
+{
+  "0": {
+    "name": "TRB",
+    "modules": [
+      "trb->self->dropout"
+    ],
+    "flow": [
+      {
+        "method": "attn_lrp",
+        "discard_ratio": 0.9,
+        "multihead_reduce": "mean",
+        "residual_connect": true,
+        "norm": true
+      },
+      {
+        "method": "attn_lrp",
+        "discard_ratio": 0.9,
+        "multihead_reduce": "mean",
+        "residual_connect": true,
+        "norm": true
+      }
+    ],
+    "collect": "token"
+  },
+  "1": {
+    "name": "CDR1A",
+    "modules": [
+      "cdr1a->self->dropout"
+    ],
+    "flow": [
+      {
+        "method": "attn_lrp",
+        "discard_ratio": 0.9,
+        "multihead_reduce": "mean",
+        "residual_connect": true,
+        "norm": true
+      },
+      {
+        "method": "attn_lrp",
+        "discard_ratio": 0.9,
+        "multihead_reduce": "mean",
+        "residual_connect": true,
+        "norm": true
+      }
+    ],
+    "collect": "token"
+  },
+  "2": {
+    "name": "CDR2A",
+    "modules": [
+      "cdr2a->self->dropout"
+    ],
+    "flow": [
+      {
+        "method": "attn_lrp",
+        "discard_ratio": 0.9,
+        "multihead_reduce": "mean",
+        "residual_connect": true,
+        "norm": true
+      },
+      {
+        "method": "attn_lrp",
+        "discard_ratio": 0.9,
+        "multihead_reduce": "mean",
+        "residual_connect": true,
+        "norm": true
+      }
+    ],
+    "collect": "token"
+  },
+  "3": {
+    "name": "CDR3A",
+    "modules": [
+      "cdr3a->self->dropout"
+    ],
+    "flow": [
+      {
+        "method": "attn_lrp",
+        "discard_ratio": 0.9,
+        "multihead_reduce": "mean",
+        "residual_connect": true,
+        "norm": true
+      },
+      {
+        "method": "attn_lrp",
+        "discard_ratio": 0.9,
+        "multihead_reduce": "mean",
+        "residual_connect": true,
+        "norm": true
+      }
+    ],
+    "collect": "token"
+  },
+  "4": {
+    "name": "epitope",
+    "modules": [
+      "epitope->self->dropout"
+    ],
+    "flow": [
+      {
+        "method": "attn_lrp",
+        "discard_ratio": 0.9,
+        "multihead_reduce": "mean",
+        "residual_connect": true,
+        "norm": true
+      },
+      {
+        "method": "attn_lrp",
+        "discard_ratio": 0.9,
+        "multihead_reduce": "mean",
+        "residual_connect": true,
+        "norm": true
+      }
+    ],
+    "collect": "token"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "cls_token": "<CLS>",
+  "eos_token": "<EOS>",
+  "mask_token": "<MSK>",
+  "pad_token": "<PAD>",
+  "sep_token": "<SEP>",
+  "unk_token": "<MIS>"
+}

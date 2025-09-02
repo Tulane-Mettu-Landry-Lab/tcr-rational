@@ -1,0 +1,19 @@
+{
+  "dataloader_num_workers": 16,
+  "per_device_train_batch_size": 512,
+  "num_train_epochs": 500,
+  "logging_strategy": "epoch",
+  "logging_steps": 5,
+  "save_strategy": "epoch",
+  "save_steps": 5,
+  "remove_unused_columns": false,
+  "optim": "adamw_torch",
+  "learning_rate": 0.0001,
+  "weight_decay": 0,
+  "lr_scheduler_type": "cosine",
+  "warmup_steps": 10,
+  "torch_compile": false,
+  "seed": 42,
+  "per_device_eval_batch_size": 2048,
+  "save_n_epoch": 10
+}

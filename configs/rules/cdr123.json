@@ -1,0 +1,61 @@
+{
+  "0": {
+    "rule": "template",
+    "template": "{CDR1A}",
+    "tokenizer": "aminoacid",
+    "prefix": "cdr1a",
+    "mapping": {}
+  },
+  "1": {
+    "rule": "template",
+    "template": "{CDR2A}",
+    "tokenizer": "aminoacid",
+    "prefix": "cdr2a",
+    "mapping": {}
+  },
+  "2": {
+    "rule": "template",
+    "template": "{CDR3A}",
+    "tokenizer": "aminoacid",
+    "prefix": "cdr3a",
+    "mapping": {}
+  },
+  "3": {
+    "rule": "template",
+    "template": "{CDR1B}",
+    "tokenizer": "aminoacid",
+    "prefix": "cdr1b",
+    "mapping": {}
+  },
+  "4": {
+    "rule": "template",
+    "template": "{CDR2B}",
+    "tokenizer": "aminoacid",
+    "prefix": "cdr2b",
+    "mapping": {}
+  },
+  "5": {
+    "rule": "template",
+    "template": "{CDR3B}",
+    "tokenizer": "aminoacid",
+    "prefix": "cdr3b",
+    "mapping": {}
+  },
+  "6": {
+    "rule": "template",
+    "template": "{epitope}",
+    "tokenizer": "aminoacid",
+    "prefix": "epitope",
+    "mapping": {}
+  },
+  "7": {
+    "rule": "forward",
+    "keys": [
+      "Label"
+    ],
+    "prefix": null,
+    "mapping": {
+      "Label": "binder_label"
+    }
+  }
+}

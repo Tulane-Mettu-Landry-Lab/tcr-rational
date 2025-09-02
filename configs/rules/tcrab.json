@@ -1,0 +1,33 @@
+{
+  "0": {
+    "rule": "template",
+    "template": "{TRA}",
+    "tokenizer": "aminoacid",
+    "prefix": "tra",
+    "mapping": {}
+  },
+  "1": {
+    "rule": "template",
+    "template": "{TRB}",
+    "tokenizer": "aminoacid",
+    "prefix": "trb",
+    "mapping": {}
+  },
+  "2": {
+    "rule": "template",
+    "template": "{epitope}",
+    "tokenizer": "aminoacid",
+    "prefix": "epitope",
+    "mapping": {}
+  },
+  "3": {
+    "rule": "forward",
+    "keys": [
+      "Label"
+    ],
+    "prefix": null,
+    "mapping": {
+      "Label": "binder_label"
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "task_configs": [
+    {
+      "name": "binder",
+      "keys": [
+        "cdr3b",
+        "epitope"
+      ],
+      "target": "binder_label",
+      "prefix": "header"
+    }
+  ],
+  "keys": [
+    "cdr3b",
+    "epitope"
+  ]
+}

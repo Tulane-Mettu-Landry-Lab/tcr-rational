@@ -1,0 +1,10 @@
+{
+  "name": "IMMREP23L",
+  "index_col": 0,
+  "sep": ",",
+  "file_name": "data.csv",
+  "data_columns": null,
+  "label_columns": ["Label"],
+  "desc": "The IMMREP23 evaluation benchmark.",
+  "seed": 42
+}

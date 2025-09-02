@@ -1,0 +1,144 @@
+{
+  "0": {
+    "name": "CDR3B",
+    "modules": [
+      "decoder_cdr3b_epitope->crossattention->self->query",
+      "decoder_cdr3b_epitope->crossattention->self->key",
+      "decoder_cdr3b_epitope->crossattention->self->dropout",
+      "decoder_cdr3b_epitope->attention->self->dropout",
+      "cdr3b->attention->self->dropout"
+    ],
+    "flow": [
+      {
+        "method": "grad_attn",
+        "discard_ratio": 0.9,
+        "multihead_reduce": "max",
+        "residual_connect": true,
+        "norm": true
+      },
+      {
+        "method": "key_decompose_quantify_query"
+      },
+      {
+        "method": "quantify_query",
+        "reduce_method": "sum",
+        "norm": true
+      },
+      {
+        "method": "grad_attn",
+        "discard_ratio": 0.9,
+        "multihead_reduce": "max",
+        "residual_connect": true,
+        "norm": true
+      },
+      {
+        "method": "grad_attn_rollout_quantify_query",
+        "discard_ratio": 0.9,
+        "multihead_reduce": "max",
+        "residual_connect": true,
+        "norm": true
+      },
+      {
+        "method": "key_decompose_quantify_query"
+      },
+      {
+        "method": "quantify_query",
+        "reduce_method": "sum",
+        "norm": true
+      },
+      {
+        "method": "grad_attn",
+        "discard_ratio": 0.9,
+        "multihead_reduce": "max",
+        "residual_connect": true,
+        "norm": true
+      },
+      {
+        "method": "grad_attn",
+        "discard_ratio": 0.9,
+        "multihead_reduce": "max",
+        "residual_connect": true,
+        "norm": true
+      },
+      {
+        "method": "grad_attn",
+        "discard_ratio": 0.9,
+        "multihead_reduce": "max",
+        "residual_connect": true,
+        "norm": true
+      }
+    ],
+    "collect": "flatten"
+  },
+  "1": {
+    "name": "epitope",
+    "modules": [
+      "decoder_epitope_cdr3b->crossattention->self->query",
+      "decoder_epitope_cdr3b->crossattention->self->key",
+      "decoder_epitope_cdr3b->crossattention->self->dropout",
+      "decoder_epitope_cdr3b->attention->self->dropout",
+      "epitope->attention->self->dropout"
+    ],
+    "flow": [
+      {
+        "method": "grad_attn",
+        "discard_ratio": 0.9,
+        "multihead_reduce": "max",
+        "residual_connect": true,
+        "norm": true
+      },
+      {
+        "method": "key_decompose_quantify_query"
+      },
+      {
+        "method": "quantify_query",
+        "reduce_method": "sum",
+        "norm": true
+      },
+      {
+        "method": "grad_attn",
+        "discard_ratio": 0.9,
+        "multihead_reduce": "max",
+        "residual_connect": true,
+        "norm": true
+      },
+      {
+        "method": "grad_attn_rollout_quantify_query",
+        "discard_ratio": 0.9,
+        "multihead_reduce": "max",
+        "residual_connect": true,
+        "norm": true
+      },
+      {
+        "method": "key_decompose_quantify_query"
+      },
+      {
+        "method": "quantify_query",
+        "reduce_method": "sum",
+        "norm": true
+      },
+      {
+        "method": "grad_attn",
+        "discard_ratio": 0.9,
+        "multihead_reduce": "max",
+        "residual_connect": true,
+        "norm": true
+      },
+      {
+        "method": "grad_attn",
+        "discard_ratio": 0.9,
+        "multihead_reduce": "max",
+        "residual_connect": true,
+        "norm": true
+      },
+      {
+        "method": "grad_attn",
+        "discard_ratio": 0.9,
+        "multihead_reduce": "max",
+        "residual_connect": true,
+        "norm": true
+      }
+    ],
+    "collect": "flatten"
+  }
+}

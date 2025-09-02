@@ -1,0 +1,27 @@
+{
+  "task_configs": [
+    {
+      "name": "binder",
+      "keys": [
+        "cdr1a",
+        "cdr2a",
+        "cdr3a",
+        "cdr1b",
+        "cdr2b",
+        "cdr3b",
+        "epitope"
+      ],
+      "target": "binder_label",
+      "prefix": "header"
+    }
+  ],
+  "keys": [
+    "cdr1a",
+    "cdr2a",
+    "cdr3a",
+    "cdr1b",
+    "cdr2b",
+    "cdr3b",
+    "epitope"
+  ]
+}

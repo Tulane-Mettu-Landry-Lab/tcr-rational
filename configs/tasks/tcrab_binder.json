@@ -1,0 +1,19 @@
+{
+  "task_configs": [
+    {
+      "name": "binder",
+      "keys": [
+        "tra",
+        "trb",
+        "epitope"
+      ],
+      "target": "binder_label",
+      "prefix": "header"
+    }
+  ],
+  "keys": [
+    "tra",
+    "trb",
+    "epitope"
+  ]
+}

@@ -1,0 +1,131 @@
+{
+  "version": "1.0",
+  "truncation": null,
+  "padding": null,
+  "added_tokens": [
+    {
+      "id": 0,
+      "content": "<EOS>",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": false,
+      "special": true
+    },
+    {
+      "id": 1,
+      "content": "<MSK>",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": false,
+      "special": true
+    },
+    {
+      "id": 2,
+      "content": "<CLS>",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": false,
+      "special": true
+    },
+    {
+      "id": 3,
+      "content": "<PAD>",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": false,
+      "special": true
+    },
+    {
+      "id": 4,
+      "content": "<MIS>",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": false,
+      "special": true
+    },
+    {
+      "id": 5,
+      "content": "<SEP>",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": false,
+      "special": true
+    },
+    {
+      "id": 6,
+      "content": "<BOS>",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": false,
+      "special": true
+    }
+  ],
+  "normalizer": null,
+  "pre_tokenizer": {
+    "type": "Split",
+    "pattern": {
+      "Regex": "(?!x)x"
+    },
+    "behavior": "Removed",
+    "invert": false
+  },
+  "post_processor": null,
+  "decoder": null,
+  "model": {
+    "type": "WordLevel",
+    "vocab": {
+      "<EOS>": 0,
+      "<MSK>": 1,
+      "<CLS>": 2,
+      "<PAD>": 3,
+      "<MIS>": 4,
+      "<SEP>": 5,
+      "<BOS>": 6,
+      "H-2q": 7,
+      "H2-Db": 8,
+      "H2-IAb": 9,
+      "H2-IEk": 10,
+      "H2-Kb": 11,
+      "H2-Kd": 12,
+      "H2-Ld": 13,
+      "HLA-A*02:01": 14,
+      "HLA-A*08:01": 15,
+      "HLA-A*11:01": 16,
+      "HLA-A*24:02": 17,
+      "HLA-A*30:02": 18,
+      "HLA-A*68:01": 19,
+      "HLA-A:01": 20,
+      "HLA-B*07:02": 21,
+      "HLA-B*08": 22,
+      "HLA-B*08:01": 23,
+      "HLA-B*15:01": 24,
+      "HLA-B*35:01": 25,
+      "HLA-B*37:01": 26,
+      "HLA-B*44:02": 27,
+      "HLA-B*51:01": 28,
+      "HLA-B*57:01": 29,
+      "HLA-B*57:03": 30,
+      "HLA-DPB1*04:01": 31,
+      "HLA-DQ2": 32,
+      "HLA-DQA": 33,
+      "HLA-DQA1*05:01/DQB1*02:01": 34,
+      "HLA-DQA1:02/DQB1*06:02": 35,
+      "HLA-DRA:01": 36,
+      "HLA-DRA:01/DRB1:01": 37,
+      "HLA-DRB1*04:01": 38,
+      "HLA-DRB1*04:05": 39,
+      "HLA-DRB1*07:01": 40,
+      "HLA-DRB1*11:01": 41,
+      "HLA-DRB1*15:01": 42,
+      "HLA-DRB1:01": 43
+    },
+    "unk_token": "<MIS>"
+  }
+}

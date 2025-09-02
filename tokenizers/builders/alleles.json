@@ -1,0 +1,15 @@
+{
+  "vocab_size": 1000,
+  "model": "WordLevel",
+  "special_tokens": {
+    "eos_token": "<EOS>",
+    "mask_token": "<MSK>",
+    "cls_token": "<CLS>",
+    "pad_token": "<PAD>",
+    "unk_token": "<MIS>",
+    "sep_token": "<SEP>",
+    "bos_token": "<BOS>"
+  },
+  "split_pattern": "(?!x)x",
+  "split_behavior": "removed"
+}

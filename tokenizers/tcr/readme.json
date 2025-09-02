@@ -1,0 +1,41 @@
+{
+  "name": "T Cell Receptor Tokenizer",
+  "desc": "Tokenize T cell receptor full sequence bit by bit.",
+  "dataset": {
+    "name": "TCRR",
+    "desc": "The TCRR dataset with only positive data.",
+    "columns": [
+      "TRA",
+      "TRB"
+    ],
+    "size": 20741,
+    "remove_na": true,
+    "unique": true
+  },
+  "builder": {
+    "vocab_size": 50,
+    "model": "BPE",
+    "special_tokens": {
+      "eos_token": "<EOS>",
+      "mask_token": "<MSK>",
+      "cls_token": "<CLS>",
+      "pad_token": "<PAD>",
+      "unk_token": "<MIS>",
+      "sep_token": "<SEP>",
+      "bos_token": "<BOS>"
+    },
+    "split_pattern": "",
+    "split_behavior": "isolated"
+  },
+  "tokenizer": {
+    "vocab_size": 28,
+    "special_tokens": {
+      "eos_token": "<EOS>",
+      "unk_token": "<MIS>",
+      "sep_token": "<SEP>",
+      "pad_token": "<PAD>",
+      "cls_token": "<CLS>",
+      "mask_token": "<MSK>"
+    }
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "name": "MHC Tokenizer",
+  "desc": "Tokenize MHC alleles.",
+  "dataset": {
+    "name": "TCRR",
+    "desc": "The TCRR dataset with only positive data.",
+    "columns": [
+      "MHC"
+    ],
+    "size": 37,
+    "remove_na": true,
+    "unique": true
+  },
+  "builder": {
+    "vocab_size": 1000,
+    "model": "WordLevel",
+    "special_tokens": {
+      "eos_token": "<EOS>",
+      "mask_token": "<MSK>",
+      "cls_token": "<CLS>",
+      "pad_token": "<PAD>",
+      "unk_token": "<MIS>",
+      "sep_token": "<SEP>",
+      "bos_token": "<BOS>"
+    },
+    "split_pattern": "(?!x)x",
+    "split_behavior": "removed"
+  },
+  "tokenizer": {
+    "vocab_size": 44,
+    "special_tokens": {
+      "eos_token": "<EOS>",
+      "unk_token": "<MIS>",
+      "sep_token": "<SEP>",
+      "pad_token": "<PAD>",
+      "cls_token": "<CLS>",
+      "mask_token": "<MSK>"
+    }
+  }
+}

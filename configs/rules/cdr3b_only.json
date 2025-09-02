@@ -1,0 +1,26 @@
+{
+  "0": {
+    "rule": "template",
+    "template": "{CDR3B}",
+    "tokenizer": "aminoacid",
+    "prefix": "cdr3b",
+    "mapping": {}
+  },
+  "1": {
+    "rule": "template",
+    "template": "{epitope}",
+    "tokenizer": "aminoacid",
+    "prefix": "epitope",
+    "mapping": {}
+  },
+  "2": {
+    "rule": "forward",
+    "keys": [
+      "Label"
+    ],
+    "prefix": null,
+    "mapping": {
+      "Label": "binder_label"
+    }
+  }
+}

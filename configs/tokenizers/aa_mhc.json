@@ -1,0 +1,14 @@
+{
+  "0": {
+    "name": "aminoacid",
+    "path": "tokenizers/aminoacid",
+    "single": "<CLS> $A <EOS>",
+    "pair": "<CLS> $A <SEP> $B:1 <EOS>:1"
+  },
+  "1": {
+    "name": "mhc",
+    "path": "tokenizers/mhc-components",
+    "single": "<CLS> $A <EOS>",
+    "pair": "<CLS> $A <SEP> $B:1 <EOS>:1"
+  }
+}

@@ -1,0 +1,120 @@
+{
+  "version": "1.0",
+  "truncation": null,
+  "padding": null,
+  "added_tokens": [
+    {
+      "id": 0,
+      "content": "<EOS>",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": false,
+      "special": true
+    },
+    {
+      "id": 1,
+      "content": "<MSK>",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": false,
+      "special": true
+    },
+    {
+      "id": 2,
+      "content": "<CLS>",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": false,
+      "special": true
+    },
+    {
+      "id": 3,
+      "content": "<PAD>",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": false,
+      "special": true
+    },
+    {
+      "id": 4,
+      "content": "<MIS>",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": false,
+      "special": true
+    },
+    {
+      "id": 5,
+      "content": "<SEP>",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": false,
+      "special": true
+    },
+    {
+      "id": 6,
+      "content": "<BOS>",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": false,
+      "special": true
+    }
+  ],
+  "normalizer": null,
+  "pre_tokenizer": {
+    "type": "Split",
+    "pattern": {
+      "Regex": "(?!x)x"
+    },
+    "behavior": "Removed",
+    "invert": false
+  },
+  "post_processor": null,
+  "decoder": null,
+  "model": {
+    "type": "WordLevel",
+    "vocab": {
+      "<EOS>": 0,
+      "<MSK>": 1,
+      "<CLS>": 2,
+      "<PAD>": 3,
+      "<MIS>": 4,
+      "<SEP>": 5,
+      "<BOS>": 6,
+      "TCRBJ1-6*02": 7,
+      "TRBJ1-1*01": 8,
+      "TRBJ1-2*01": 9,
+      "TRBJ1-3*01": 10,
+      "TRBJ1-4*01": 11,
+      "TRBJ1-4*02": 12,
+      "TRBJ1-5*01": 13,
+      "TRBJ1-5*02": 14,
+      "TRBJ1-6*01": 15,
+      "TRBJ1-6*02": 16,
+      "TRBJ10-1*01": 17,
+      "TRBJ17-1*01": 18,
+      "TRBJ19-1*01": 19,
+      "TRBJ2-1*01": 20,
+      "TRBJ2-2*01": 21,
+      "TRBJ2-3*01": 22,
+      "TRBJ2-4*01": 23,
+      "TRBJ2-5*01": 24,
+      "TRBJ2-6*01": 25,
+      "TRBJ2-7 *01": 26,
+      "TRBJ2-7*01": 27,
+      "TRBJ20-1*01": 28,
+      "TRBJ24-1*01": 29,
+      "TRBJ38-2/DV8*01": 30,
+      "TRBJ5-1*01": 31,
+      "TRBJ5-6*01": 32
+    },
+    "unk_token": "<MIS>"
+  }
+}
